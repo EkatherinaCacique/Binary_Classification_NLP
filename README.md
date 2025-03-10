@@ -69,5 +69,5 @@ Durante el entrenamiento, se mostrarán las gráficas de la evolución del **err
 
 ---
 
-🌸 Espero que te guste con el toque de emojis rosas 🌸✨💖
+
 
