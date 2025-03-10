@@ -1,50 +1,73 @@
-# IMDB Sentiment Analysis
+# 🌸📚 Clasificación Binaria NLP en IMDb con Redes Neuronales  
 
-Este proyecto entrena una red neuronal para analizar sentimientos en reseñas de películas usando el conjunto de datos IMDB.
+Este proyecto entrena un modelo de clasificación binaria utilizando el conjunto de datos de reseñas de películas de **IMDb**. Se emplea **aprendizaje profundo** con la biblioteca **Keras** para predecir si una reseña tiene una valoración **positiva** o **negativa**.  
 
-## 📌 Requisitos
+## 🚀🌸 Descripción del Proyecto  
 
-Antes de ejecutar el código, asegúrate de tener instaladas las siguientes dependencias:
+El código implementa una **red neuronal densa** con Keras para realizar **clasificación binaria** en un conjunto de datos de **reseñas de películas de IMDb**. Se carga el conjunto de datos, se preprocesa, se entrena un modelo y se visualizan los resultados.  
 
-```bash
-pip install numpy matplotlib keras tensorflow
+## 📌🌸 Características Principales  
+
+✔ Carga el conjunto de datos de **IMDb** (10,000 palabras más frecuentes).  
+✔ Vectoriza las reseñas mediante **one-hot encoding**.  
+✔ Implementa una red neuronal con **dos capas ocultas**.  
+✔ Usa **entropía cruzada binaria** como función de pérdida.  
+✔ Divide el conjunto de datos en entrenamiento y validación.  
+✔ Muestra **gráficas** de la evolución del entrenamiento.  
+
+## 🛠️🌸 Instalación y Configuración  
+
+1. **Clona el repositorio** o copia el código en tu entorno:  
+   ```sh
+   git clone https://github.com/tu_usuario/tu_repositorio.git
+   cd tu_repositorio
+   ```  
+
+2. **Instala las dependencias necesarias**:  
+   ```sh
+   pip install numpy matplotlib tensorflow keras
+   ```  
+
+3. **Ejecuta el script principal**:  
+   ```sh
+   python main.py
+   ```  
+
+## 💂🏻‍♂️🌸 Estructura del Proyecto  
+
+```
+/proyecto
+│── main.py                 # Archivo principal para ejecutar el modelo
+│── README.md               # Documentación del proyecto
+│── requirements.txt        # Lista de dependencias
+│── .gitignore              # Archivos a ignorar en Git
+│── /src
+│   ├── Binary_Classification_NLP.py            # Código del modelo y entrenamiento
 ```
 
-## 🚀 Ejecución del script
+## 🧠🌸 Explicación del Modelo  
 
-Para entrenar el modelo y visualizar los resultados, simplemente ejecuta el siguiente comando en la terminal:
+1. **Carga del dataset**: Se usa `keras.datasets.imdb` para obtener reseñas de películas etiquetadas como positivas o negativas.  
+2. **Preprocesamiento**: Se convierten las reseñas en vectores de tamaño fijo mediante **one-hot encoding**.  
+3. **Creación del modelo**:  
+   - Capa densa con **16 neuronas** y activación `ReLU`.  
+   - Otra capa densa con **16 neuronas**.  
+   - Capa de salida con **1 neurona** y activación `sigmoid` para clasificar.  
+4. **Entrenamiento**: Se divide el dataset en **entrenamiento** y **validación**. Se entrena durante **20 épocas** con `batch_size=512`.  
+5. **Evaluación**: Se calcula la precisión final en los datos de prueba.  
+6. **Visualización**: Se grafican la **pérdida** y **precisión** durante el entrenamiento.  
 
-```bash
-python script.py
-```
+## 📊🌸 Resultados Esperados  
 
-> Asegúrate de que el archivo `script.py` contiene el código del modelo.
+Durante el entrenamiento, se mostrarán las gráficas de la evolución del **error** y la **precisión**.  
 
-## 📖 Descripción del Código
+## 📝🌸 Notas  
 
-1. **Carga de Datos:** Se utiliza el dataset de IMDB incluido en Keras.
-2. **Preprocesamiento:** Se vectorizan las secuencias de palabras en valores numéricos binarios.
-3. **Construcción del Modelo:** Se define una red neuronal con capas densas.
-4. **Entrenamiento:** Se entrena el modelo con un conjunto de validación.
-5. **Evaluación:** Se mide la precisión del modelo sobre el conjunto de prueba.
-6. **Visualización:** Se grafican las métricas de entrenamiento y validación.
+- **El conjunto de datos ya está preprocesado** en Keras, por lo que las palabras están representadas como enteros.  
+- Se usa **one-hot encoding** para representar las reseñas en un vector de tamaño fijo de 10,000 elementos.  
+- El modelo utiliza **sigmoid** para devolver la probabilidad de que la reseña sea positiva.  
 
-## 📊 Gráficos Generados
+---
 
-- **Pérdida durante el entrenamiento y validación.**
-- **Precisión durante el entrenamiento y validación.**
-
-Estos gráficos ayudan a visualizar el rendimiento del modelo.
-
-## 📜 Resultados
-
-Tras el entrenamiento, el modelo evalúa su desempeño sobre los datos de prueba y muestra la precisión y la pérdida obtenidas.
-
-## ✨ Mejoras Posibles
-
-- Ajustar el número de neuronas en las capas ocultas.
-- Modificar el número de épocas para evitar sobreajuste.
-- Experimentar con diferentes optimizadores.
-
-¡Siéntete libre de contribuir al proyecto con mejoras o sugerencias! 😊
+🌸 Espero que te guste con el toque de emojis rosas 🌸✨💖
 
